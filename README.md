@@ -120,7 +120,7 @@ LangGraph, Google ADK, or any other orchestration framework.
 ## Package layout
 
 ```text
-skills/python-concurrency-production/
+skills/python-concurrency-hardening/
 ├── SKILL.md                       # shared entry point and routing
 ├── references/
 │   ├── production-standard.md     # async/API/service decisions
@@ -139,14 +139,14 @@ skills/python-concurrency-production/
 
 ## Use it in Codex, Claude Code, and GitHub Copilot or anywhere where Skills are supported
 
-Install or link the **entire** `python-concurrency-production` folder, not just
+Install or link the **entire** `python-concurrency-hardening` folder, not just
 `SKILL.md`, so relative references and examples remain available:
 
 | Client | Personal discovery location | Repository discovery location |
 | --- | --- | --- |
-| Codex | `~/.agents/skills/python-concurrency-production/` | `.agents/skills/python-concurrency-production/` |
-| Claude Code | `~/.claude/skills/python-concurrency-production/` | `.claude/skills/python-concurrency-production/` |
-| GitHub Copilot | `~/.copilot/skills/python-concurrency-production/` or `~/.agents/skills/...` | `.github/skills/...`, `.agents/skills/...`, or `.claude/skills/...` |
+| Codex | `~/.agents/skills/python-concurrency-hardening/` | `.agents/skills/python-concurrency-hardening/` |
+| Claude Code | `~/.claude/skills/python-concurrency-hardening/` | `.claude/skills/python-concurrency-hardening/` |
+| GitHub Copilot | `~/.copilot/skills/python-concurrency-hardening/` or `~/.agents/skills/...` | `.github/skills/...`, `.agents/skills/...`, or `.claude/skills/...` |
 
 Use a single source folder and links or copies in the discovery locations you
 need. If a repository contains both `.agents/skills/` and `.claude/skills/`,
@@ -166,7 +166,7 @@ use only the standard library; the adapter test skips itself unless `fastapi`
 and `httpx` are installed:
 
 ```sh
-python3 -m unittest discover -s skills/python-concurrency-production/examples -p 'test_*.py' -v
+python3 -m unittest discover -s skills/python-concurrency-hardening/examples -p 'test_*.py' -v
 ```
 
 The example proves bounded overlapping calls, fail-fast sibling cleanup,
@@ -179,7 +179,7 @@ When an assistant changes a real service, ask it to use
 `references/verification.md`, run that service's tests, and show measured load
 evidence before claiming a throughput target. For example:
 
-> Use the python-concurrency-production skill to review this FastAPI request
+> Use the python-concurrency-hardening skill to review this FastAPI request
 > path. Cite exact code locations, calculate per-process and deployment limits,
 > run relevant tests, and distinguish verified behavior from unknown capacity.
 

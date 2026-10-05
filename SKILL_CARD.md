@@ -1,4 +1,4 @@
-# Skill card: python-concurrency-production
+# Skill card: python-concurrency-hardening
 
 **Version:** v1 (beta)
 **Type:** Agent Skill (instructions plus reference files and runnable examples; no model, no service)

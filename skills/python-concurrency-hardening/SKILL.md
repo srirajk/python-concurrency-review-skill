@@ -1,5 +1,5 @@
 ---
-name: python-concurrency-production
+name: python-concurrency-hardening
 description: Review or implement production Python concurrency in APIs, services, and agent workloads (FastAPI, LangGraph, Google ADK, custom agent loops) using asyncio, threads, or executors. Use when task ownership, blocking work, cancellation, deadlines, capacity, or leaks affect correctness under load, for example a service that hangs, slows down, or keeps growing in memory, tasks, threads, or connections, or streaming and agent runs that must stop when the client disconnects.
 ---
 
