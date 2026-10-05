@@ -1,0 +1,6 @@
+.idea/
+*.iml
+__pycache__/
+*.pyc
+.DS_Store
+PYTHON_ASYNC_PRODUCTION_REVIEW.md
